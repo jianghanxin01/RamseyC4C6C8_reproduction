@@ -1,0 +1,298 @@
+{
+  "command": "REPRODUCE_ALL.cmd --no-pause",
+  "passed": true,
+  "wall_seconds": 197.1930951,
+  "started_utc": "2026-09-23T03:39:55.4072163Z",
+  "finished_utc": "2026-09-23T03:43:12.6054107Z",
+  "exit_code": 0,
+  "input_audit_status": "PASS",
+  "input_audit_cases": 9,
+  "input_audit_seconds": 10.099,
+  "run_directory": "recorded-runs/full-regeneration",
+  "binaries": [
+    {
+      "name": "RamseyInputs",
+      "sha256": "e94ab5d895a4801e02723547d753cb699cfe995c3272ecb67a631ac1cf32aba2"
+    },
+    {
+      "name": "RamseySolve",
+      "sha256": "62ee399c1a46b0aee54247574e26bbaad02e8f2b0b7620c0ee4f3acf5ddb146c"
+    },
+    {
+      "name": "RamseyRup",
+      "sha256": "a414a32bf1b09ef1a66eb2eafbd387d001836450eb16edff3a0f81d7f44ff8fc"
+    }
+  ],
+  "cases": [
+    {
+      "id": "48T1",
+      "passed": true,
+      "generated_cnf": "recorded-runs/full-regeneration/generated/48T1.cnf",
+      "generated_rup": "recorded-runs/full-regeneration/generated/48T1.rup",
+      "cnf_sha256": "e66e6299832c06f692f624464bf48b0ae49b502f66ca86e9bc32529179606b3c",
+      "rup_sha256": "c493bd227363d5da0fd1af8c5bd45697ee678db3e96a18cc0bdc40a1c49e473e",
+      "cnf_bytes": 120388,
+      "rup_bytes": 1036232,
+      "solver_output": "s UNSATISFIABLE\r\nc solver=Glucose-4.2.1-core variables=31 clauses=5135 conflicts=15806 parse_seconds=0.006816 solve_seconds=0.209593 total_seconds=0.216409",
+      "checker_output": "VERIFIED variables=31 original=5135 additions=15806 deletions_ignored=19624 final_empty=1 load_seconds=0.007473 proof_seconds=0.861102 total_seconds=0.868575",
+      "solver_statistics": {
+        "parse_seconds": "0.006816",
+        "conflicts": "15806",
+        "variables": "31",
+        "solve_seconds": "0.209593",
+        "clauses": "5135",
+        "total_seconds": "0.216409"
+      },
+      "checker_statistics": {
+        "variables": "31",
+        "load_seconds": "0.007473",
+        "additions": "15806",
+        "original": "5135",
+        "final_empty": "1",
+        "proof_seconds": "0.861102",
+        "deletions_ignored": "19624",
+        "total_seconds": "0.868575"
+      }
+    },
+    {
+      "id": "48T2",
+      "passed": true,
+      "generated_cnf": "recorded-runs/full-regeneration/generated/48T2.cnf",
+      "generated_rup": "recorded-runs/full-regeneration/generated/48T2.rup",
+      "cnf_sha256": "c0dce8880687121b190050de072592362806a6d55772c4d3f2c6a94e0058ba8a",
+      "rup_sha256": "7b1774424e6e7c6bcad5517d815e18b457622860408dbf4fd051d5fd446d347f",
+      "cnf_bytes": 106256,
+      "rup_bytes": 948571,
+      "solver_output": "s UNSATISFIABLE\r\nc solver=Glucose-4.2.1-core variables=31 clauses=4567 conflicts=16210 parse_seconds=0.006267 solve_seconds=0.231385 total_seconds=0.237652",
+      "checker_output": "VERIFIED variables=31 original=4567 additions=16370 deletions_ignored=16136 final_empty=1 load_seconds=0.006881 proof_seconds=0.929245 total_seconds=0.936126",
+      "solver_statistics": {
+        "parse_seconds": "0.006267",
+        "conflicts": "16210",
+        "variables": "31",
+        "solve_seconds": "0.231385",
+        "clauses": "4567",
+        "total_seconds": "0.237652"
+      },
+      "checker_statistics": {
+        "variables": "31",
+        "load_seconds": "0.006881",
+        "additions": "16370",
+        "original": "4567",
+        "final_empty": "1",
+        "proof_seconds": "0.929245",
+        "deletions_ignored": "16136",
+        "total_seconds": "0.936126"
+      }
+    },
+    {
+      "id": "H10-I3",
+      "passed": true,
+      "generated_cnf": "recorded-runs/full-regeneration/generated/H10-I3.cnf",
+      "generated_rup": "recorded-runs/full-regeneration/generated/H10-I3.rup",
+      "cnf_sha256": "46f6f7dc4e20ab8639c54133a7c4edc67aa015d7522d403199c3ce760fe7c7b7",
+      "rup_sha256": "2a58bf2bd912f9501bbd8f7009dcb4d1476e9730d379a652ebf7d4efc0151c9c",
+      "cnf_bytes": 459455,
+      "rup_bytes": 726199,
+      "solver_output": "s UNSATISFIABLE\r\nc solver=Glucose-4.2.1-core variables=521 clauses=17903 conflicts=6483 parse_seconds=0.022329 solve_seconds=0.093359 total_seconds=0.115688",
+      "checker_output": "VERIFIED variables=521 original=17903 additions=6676 deletions_ignored=18091 final_empty=1 load_seconds=0.027482 proof_seconds=0.436171 total_seconds=0.463653",
+      "solver_statistics": {
+        "parse_seconds": "0.022329",
+        "conflicts": "6483",
+        "variables": "521",
+        "solve_seconds": "0.093359",
+        "clauses": "17903",
+        "total_seconds": "0.115688"
+      },
+      "checker_statistics": {
+        "variables": "521",
+        "load_seconds": "0.027482",
+        "additions": "6676",
+        "original": "17903",
+        "final_empty": "1",
+        "proof_seconds": "0.436171",
+        "deletions_ignored": "18091",
+        "total_seconds": "0.463653"
+      }
+    },
+    {
+      "id": "H10-K2_K1",
+      "passed": true,
+      "generated_cnf": "recorded-runs/full-regeneration/generated/H10-K2_K1.cnf",
+      "generated_rup": "recorded-runs/full-regeneration/generated/H10-K2_K1.rup",
+      "cnf_sha256": "6b49b9649e13af5f955e219019747c1286bf69f86756ab41397d1e766a8005a2",
+      "rup_sha256": "23cbfc3b240a16bfe2264aa028f27f44f3f3d277f81d17c4cd146effafc444fa",
+      "cnf_bytes": 459454,
+      "rup_bytes": 626432,
+      "solver_output": "s UNSATISFIABLE\r\nc solver=Glucose-4.2.1-core variables=521 clauses=17903 conflicts=5325 parse_seconds=0.022937 solve_seconds=0.095038 total_seconds=0.117975",
+      "checker_output": "VERIFIED variables=521 original=17903 additions=5926 deletions_ignored=15676 final_empty=1 load_seconds=0.028144 proof_seconds=0.402152 total_seconds=0.430296",
+      "solver_statistics": {
+        "parse_seconds": "0.022937",
+        "conflicts": "5325",
+        "variables": "521",
+        "solve_seconds": "0.095038",
+        "clauses": "17903",
+        "total_seconds": "0.117975"
+      },
+      "checker_statistics": {
+        "variables": "521",
+        "load_seconds": "0.028144",
+        "additions": "5926",
+        "original": "17903",
+        "final_empty": "1",
+        "proof_seconds": "0.402152",
+        "deletions_ignored": "15676",
+        "total_seconds": "0.430296"
+      }
+    },
+    {
+      "id": "H10-P3",
+      "passed": true,
+      "generated_cnf": "recorded-runs/full-regeneration/generated/H10-P3.cnf",
+      "generated_rup": "recorded-runs/full-regeneration/generated/H10-P3.rup",
+      "cnf_sha256": "3baa5e47ccbbb930673a401b18fd0bb418ee5784de276208531331078c1f074b",
+      "rup_sha256": "43dc517b512bdb69be67c4ab30d4837c586615d15103c8dbe8954d5b61dcb7a4",
+      "cnf_bytes": 459453,
+      "rup_bytes": 652671,
+      "solver_output": "s UNSATISFIABLE\r\nc solver=Glucose-4.2.1-core variables=521 clauses=17903 conflicts=6042 parse_seconds=0.023611 solve_seconds=0.081702 total_seconds=0.105314",
+      "checker_output": "VERIFIED variables=521 original=17903 additions=6219 deletions_ignored=15778 final_empty=1 load_seconds=0.026987 proof_seconds=0.369073 total_seconds=0.396060",
+      "solver_statistics": {
+        "parse_seconds": "0.023611",
+        "conflicts": "6042",
+        "variables": "521",
+        "solve_seconds": "0.081702",
+        "clauses": "17903",
+        "total_seconds": "0.105314"
+      },
+      "checker_statistics": {
+        "variables": "521",
+        "load_seconds": "0.026987",
+        "additions": "6219",
+        "original": "17903",
+        "final_empty": "1",
+        "proof_seconds": "0.369073",
+        "deletions_ignored": "15778",
+        "total_seconds": "0.396060"
+      }
+    },
+    {
+      "id": "B-root-1",
+      "passed": true,
+      "generated_cnf": "recorded-runs/full-regeneration/generated/B-root-1.cnf",
+      "generated_rup": "recorded-runs/full-regeneration/generated/B-root-1.rup",
+      "cnf_sha256": "6b91e5061dc59e4c9d4217c3c356e7b6346783e71748435af3060b7ce7407345",
+      "rup_sha256": "1e2837f117d69b59cad53f7d803ee4a649468b300a3f0046036cf9146a9ff9df",
+      "cnf_bytes": 15214390,
+      "rup_bytes": 8345378,
+      "solver_output": "s UNSATISFIABLE\r\nc solver=Glucose-4.2.1-core variables=1672 clauses=453834 conflicts=57497 parse_seconds=0.719234 solve_seconds=11.643986 total_seconds=12.363220",
+      "checker_output": "VERIFIED variables=1672 original=453834 additions=64277 deletions_ignored=127524 final_empty=1 load_seconds=0.825860 proof_seconds=61.796924 total_seconds=62.622784",
+      "solver_statistics": {
+        "parse_seconds": "0.719234",
+        "conflicts": "57497",
+        "variables": "1672",
+        "solve_seconds": "11.643986",
+        "clauses": "453834",
+        "total_seconds": "12.363220"
+      },
+      "checker_statistics": {
+        "variables": "1672",
+        "load_seconds": "0.825860",
+        "additions": "64277",
+        "original": "453834",
+        "final_empty": "1",
+        "proof_seconds": "61.796924",
+        "deletions_ignored": "127524",
+        "total_seconds": "62.622784"
+      }
+    },
+    {
+      "id": "B-root-2",
+      "passed": true,
+      "generated_cnf": "recorded-runs/full-regeneration/generated/B-root-2.cnf",
+      "generated_rup": "recorded-runs/full-regeneration/generated/B-root-2.rup",
+      "cnf_sha256": "2eb50699e9cb4dc5deb42be812f77cb50e300f7111924d3d10f86e22f2d5a3b5",
+      "rup_sha256": "97153f2e51d9c41ffcd7c8a59a0f1138fe19b66b498f926b5b0510f842af9ba6",
+      "cnf_bytes": 15304646,
+      "rup_bytes": 7952325,
+      "solver_output": "s UNSATISFIABLE\r\nc solver=Glucose-4.2.1-core variables=1553 clauses=462022 conflicts=64892 parse_seconds=0.771512 solve_seconds=19.019529 total_seconds=19.791041",
+      "checker_output": "VERIFIED variables=1553 original=462022 additions=75124 deletions_ignored=105459 final_empty=1 load_seconds=0.906120 proof_seconds=83.923085 total_seconds=84.829205",
+      "solver_statistics": {
+        "parse_seconds": "0.771512",
+        "conflicts": "64892",
+        "variables": "1553",
+        "solve_seconds": "19.019529",
+        "clauses": "462022",
+        "total_seconds": "19.791041"
+      },
+      "checker_statistics": {
+        "variables": "1553",
+        "load_seconds": "0.906120",
+        "additions": "75124",
+        "original": "462022",
+        "final_empty": "1",
+        "proof_seconds": "83.923085",
+        "deletions_ignored": "105459",
+        "total_seconds": "84.829205"
+      }
+    },
+    {
+      "id": "B-leafK4",
+      "passed": true,
+      "generated_cnf": "recorded-runs/full-regeneration/generated/B-leafK4.cnf",
+      "generated_rup": "recorded-runs/full-regeneration/generated/B-leafK4.rup",
+      "cnf_sha256": "7d64f0e4b6688f7fb74380081dcc657d6f51402b2da890bd7769e6d1c2b1d3f7",
+      "rup_sha256": "2914599ff27534f265afe36552b4af455276fea3d359d0d1e28a2e64f21d9a39",
+      "cnf_bytes": 1143338,
+      "rup_bytes": 27963,
+      "solver_output": "s UNSATISFIABLE\r\nc solver=Glucose-4.2.1-core variables=1335 clauses=35107 conflicts=772 parse_seconds=0.061466 solve_seconds=0.038369 total_seconds=0.099835",
+      "checker_output": "VERIFIED variables=1335 original=35107 additions=772 deletions_ignored=431 final_empty=1 load_seconds=0.071572 proof_seconds=0.060683 total_seconds=0.132255",
+      "solver_statistics": {
+        "parse_seconds": "0.061466",
+        "conflicts": "772",
+        "variables": "1335",
+        "solve_seconds": "0.038369",
+        "clauses": "35107",
+        "total_seconds": "0.099835"
+      },
+      "checker_statistics": {
+        "variables": "1335",
+        "load_seconds": "0.071572",
+        "additions": "772",
+        "original": "35107",
+        "final_empty": "1",
+        "proof_seconds": "0.060683",
+        "deletions_ignored": "431",
+        "total_seconds": "0.132255"
+      }
+    },
+    {
+      "id": "B-C9",
+      "passed": true,
+      "generated_cnf": "recorded-runs/full-regeneration/generated/B-C9.cnf",
+      "generated_rup": "recorded-runs/full-regeneration/generated/B-C9.rup",
+      "cnf_sha256": "b1b635b4370f74b175312dc88c67443ed13be55ea2cf80572704e32ffec1299e",
+      "rup_sha256": "2c0faa34e26fa381cf71a7f14ed5be862a97accd9879e6a471f3288b7c702fb1",
+      "cnf_bytes": 10154032,
+      "rup_bytes": 48729,
+      "solver_output": "s UNSATISFIABLE\r\nc solver=Glucose-4.2.1-core variables=1085 clauses=362228 conflicts=1571 parse_seconds=0.563622 solve_seconds=0.355296 total_seconds=0.918918",
+      "checker_output": "VERIFIED variables=1085 original=362228 additions=1595 deletions_ignored=154 final_empty=1 load_seconds=0.618249 proof_seconds=0.737370 total_seconds=1.355620",
+      "solver_statistics": {
+        "parse_seconds": "0.563622",
+        "conflicts": "1571",
+        "variables": "1085",
+        "solve_seconds": "0.355296",
+        "clauses": "362228",
+        "total_seconds": "0.918918"
+      },
+      "checker_statistics": {
+        "variables": "1085",
+        "load_seconds": "0.618249",
+        "additions": "1595",
+        "original": "362228",
+        "final_empty": "1",
+        "proof_seconds": "0.737370",
+        "deletions_ignored": "154",
+        "total_seconds": "1.355620"
+      }
+    }
+  ]
+}

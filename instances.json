@@ -1,0 +1,86 @@
+{
+  "modules": 3,
+  "instances": [
+    {
+      "name": "B-root-1",
+      "module": "blue",
+      "cnf": "data/blue/blue_d1_full53.cnf",
+      "proof": "data/blue/blue_d1_full53.rup",
+      "cnf_sha256": "722bf44e4d1fbcab7a70758e7496aecad01c1d96d5bcc6b93ade9bd4f752f5e4",
+      "proof_sha256": "0ce89da2f89af17d381f50f67885aaeb40b6d3be1ab185a1a53fd92904681356",
+      "recorded_status": "UNSAT_RUP_CHECKED"
+    },
+    {
+      "name": "B-root-2",
+      "module": "blue",
+      "cnf": "data/blue/blue_d2_full53.cnf",
+      "proof": "data/blue/blue_d2_full53.rup",
+      "cnf_sha256": "b8591a55b617bbdcd34b2576244568511b4c889337f26fb188ca1558cfc21fa0",
+      "proof_sha256": "a8dd5a52e7869b0af1c1b595015689a7bf2707ce80da8f616a9ceb1b8418a5d5",
+      "recorded_status": "UNSAT_RUP_CHECKED"
+    },
+    {
+      "name": "B-leafK4",
+      "module": "blue",
+      "cnf": "data/blue/blue_high_leafK4/instance.cnf",
+      "proof": "data/blue/blue_high_leafK4/proof.rup",
+      "cnf_sha256": "04f297e2966be3fa681bec6ec7a8c1136f153ba74fc2926d011fd5da7c21ec0c",
+      "proof_sha256": "f5e507ed943bded7fa3746f1c0ad18fad99fa3571454d81e4343d723e2caaddb",
+      "recorded_status": "UNSAT_RUP_CHECKED"
+    },
+    {
+      "name": "B-C9",
+      "module": "blue",
+      "cnf": "data/blue/blue_high_C9/instance.cnf",
+      "proof": "data/blue/blue_high_C9/proof.rup",
+      "cnf_sha256": "7a80e1bf9009760ea217d9cab487488f0298d331f8289419449f18ae42329696",
+      "proof_sha256": "df3a41b63b82ca6b1d6a7178d0716944cea3064204c517eb82b360b75ffcc9e6",
+      "recorded_status": "UNSAT_RUP_CHECKED"
+    },
+    {
+      "name": "H10-I3",
+      "module": "hexagon",
+      "cnf": "data/hexagon/hexagon_refined52/I3.cnf",
+      "proof": "data/hexagon/hexagon_refined52/I3.rup",
+      "cnf_sha256": "c4ddfc33370e467e390500d0d2b602bea083026aac8934bafc8e46ab284381f0",
+      "proof_sha256": "6b137906654db619c359a846d76962415c8244940275d5a901ba6a1a250bc64c",
+      "recorded_status": "UNSAT_RUP_CHECKED"
+    },
+    {
+      "name": "H10-K2_K1",
+      "module": "hexagon",
+      "cnf": "data/hexagon/hexagon_refined52/K2_K1.cnf",
+      "proof": "data/hexagon/hexagon_refined52/K2_K1.rup",
+      "cnf_sha256": "6004b83d2ad14ee42b815c84a797e20c474ab316492b836e1ef7530fddfc1ef8",
+      "proof_sha256": "91f34f95f6e1d7e48c66bcad9c61e36eba5e7cc0be311d6c2c46986f8ce7a03b",
+      "recorded_status": "UNSAT_RUP_CHECKED"
+    },
+    {
+      "name": "H10-P3",
+      "module": "hexagon",
+      "cnf": "data/hexagon/hexagon_refined52/P3.cnf",
+      "proof": "data/hexagon/hexagon_refined52/P3.rup",
+      "cnf_sha256": "98131586c47fc59ff2f95b720770161df73b7579d33720dca10d65a6e52145d4",
+      "proof_sha256": "78b9fdf9dbccfa48c29edab41612211792944fe42ba6a8b2e88273bff46c14c0",
+      "recorded_status": "UNSAT_RUP_CHECKED"
+    },
+    {
+      "name": "48T1",
+      "module": "arrows",
+      "cnf": "data/arrows/certificates/48T1.cnf",
+      "proof": "data/arrows/certificates/48T1.rup",
+      "cnf_sha256": "89d1b277b78e455c0f25f0a8bf13891710f39e390deecc660504acb3658343c0",
+      "proof_sha256": "d0a9e25d37208c82b1e505fd48a3be3d91e59abdef812bcf196d2a224ed698ed",
+      "recorded_status": "UNSAT_RUP_CHECKED"
+    },
+    {
+      "name": "48T2",
+      "module": "arrows",
+      "cnf": "data/arrows/certificates/48T2.cnf",
+      "proof": "data/arrows/certificates/48T2.rup",
+      "cnf_sha256": "4ce95109b851892a52f3506f6eba1044488012b56c8dbc98ff5ea1e755a8c175",
+      "proof_sha256": "60abef5ad5d2ddff4ca0d95dfc3a2d15d0866f2c193cc4ab13fa1450cbe70180",
+      "recorded_status": "UNSAT_RUP_CHECKED"
+    }
+  ]
+}

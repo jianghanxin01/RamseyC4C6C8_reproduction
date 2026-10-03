@@ -1,0 +1,2300 @@
+{
+  "fixed_tests": [
+    {
+      "name": "valid_units",
+      "expected_exit": 0,
+      "expected_message": null,
+      "passed": true,
+      "exit_code": 0,
+      "wall_seconds": 0.2080139000318013,
+      "stdout": "VERIFIED variables=1 original=2 additions=1 deletions_ignored=0 final_empty=1 load_seconds=0.000140 proof_seconds=0.000072 total_seconds=0.000213",
+      "stderr": ""
+    },
+    {
+      "name": "valid_watched_derivation",
+      "expected_exit": 0,
+      "expected_message": null,
+      "passed": true,
+      "exit_code": 0,
+      "wall_seconds": 0.0162341000395827,
+      "stdout": "VERIFIED variables=2 original=4 additions=2 deletions_ignored=0 final_empty=1 load_seconds=0.000147 proof_seconds=0.000080 total_seconds=0.000227",
+      "stderr": ""
+    },
+    {
+      "name": "valid_duplicate_addition",
+      "expected_exit": 0,
+      "expected_message": null,
+      "passed": true,
+      "exit_code": 0,
+      "wall_seconds": 0.015856500016525388,
+      "stdout": "VERIFIED variables=2 original=4 additions=2 deletions_ignored=0 final_empty=1 load_seconds=0.000147 proof_seconds=0.000080 total_seconds=0.000228",
+      "stderr": ""
+    },
+    {
+      "name": "valid_duplicate_input",
+      "expected_exit": 0,
+      "expected_message": null,
+      "passed": true,
+      "exit_code": 0,
+      "wall_seconds": 0.015354699979070574,
+      "stdout": "VERIFIED variables=1 original=2 additions=1 deletions_ignored=0 final_empty=1 load_seconds=0.000141 proof_seconds=0.000078 total_seconds=0.000220",
+      "stderr": ""
+    },
+    {
+      "name": "valid_tautology",
+      "expected_exit": 0,
+      "expected_message": null,
+      "passed": true,
+      "exit_code": 0,
+      "wall_seconds": 0.013905599946156144,
+      "stdout": "VERIFIED variables=2 original=4 additions=3 deletions_ignored=0 final_empty=1 load_seconds=0.000143 proof_seconds=0.000087 total_seconds=0.000231",
+      "stderr": ""
+    },
+    {
+      "name": "valid_ignored_deletion",
+      "expected_exit": 0,
+      "expected_message": null,
+      "passed": true,
+      "exit_code": 0,
+      "wall_seconds": 0.016197499993722886,
+      "stdout": "VERIFIED variables=1 original=2 additions=1 deletions_ignored=3 final_empty=1 load_seconds=0.000145 proof_seconds=0.000083 total_seconds=0.000228",
+      "stderr": ""
+    },
+    {
+      "name": "valid_zero_variables",
+      "expected_exit": 0,
+      "expected_message": null,
+      "passed": true,
+      "exit_code": 0,
+      "wall_seconds": 0.014461199985817075,
+      "stdout": "VERIFIED variables=0 original=1 additions=1 deletions_ignored=0 final_empty=1 load_seconds=0.000135 proof_seconds=0.000081 total_seconds=0.000216",
+      "stderr": ""
+    },
+    {
+      "name": "valid_wrapped_input",
+      "expected_exit": 0,
+      "expected_message": null,
+      "passed": true,
+      "exit_code": 0,
+      "wall_seconds": 0.01769499998772517,
+      "stdout": "VERIFIED variables=2 original=4 additions=2 deletions_ignored=0 final_empty=1 load_seconds=0.000144 proof_seconds=0.000083 total_seconds=0.000227",
+      "stderr": ""
+    },
+    {
+      "name": "valid_dynamic_100000",
+      "expected_exit": 0,
+      "expected_message": null,
+      "passed": true,
+      "exit_code": 0,
+      "wall_seconds": 0.01703109999652952,
+      "stdout": "VERIFIED variables=100000 original=2 additions=1 deletions_ignored=0 final_empty=1 load_seconds=0.000887 proof_seconds=0.000237 total_seconds=0.001124",
+      "stderr": ""
+    },
+    {
+      "name": "invalid_clause",
+      "expected_exit": 1,
+      "expected_message": "invalid RUP addition 1",
+      "passed": true,
+      "exit_code": 1,
+      "wall_seconds": 0.013614099996630102,
+      "stdout": "",
+      "stderr": "REJECTED: recorded-tests/checker/invalid_clause.rup:1: invalid RUP addition 1"
+    },
+    {
+      "name": "invalid_empty",
+      "expected_exit": 1,
+      "expected_message": "invalid RUP addition 1",
+      "passed": true,
+      "exit_code": 1,
+      "wall_seconds": 0.01515099999960512,
+      "stdout": "",
+      "stderr": "REJECTED: recorded-tests/checker/invalid_empty.rup:1: invalid RUP addition 1"
+    },
+    {
+      "name": "no_empty",
+      "expected_exit": 1,
+      "expected_message": "explicit empty-clause",
+      "passed": true,
+      "exit_code": 1,
+      "wall_seconds": 0.01054289995227009,
+      "stdout": "",
+      "stderr": "REJECTED: proof must end with an explicit empty-clause addition"
+    },
+    {
+      "name": "initial_empty_no_proof",
+      "expected_exit": 1,
+      "expected_message": "explicit empty-clause",
+      "passed": true,
+      "exit_code": 1,
+      "wall_seconds": 0.010123299958650023,
+      "stdout": "",
+      "stderr": "REJECTED: proof must end with an explicit empty-clause addition"
+    },
+    {
+      "name": "nonfinal_empty",
+      "expected_exit": 1,
+      "expected_message": "explicit empty-clause",
+      "passed": true,
+      "exit_code": 1,
+      "wall_seconds": 0.011185900017153472,
+      "stdout": "",
+      "stderr": "REJECTED: proof must end with an explicit empty-clause addition"
+    },
+    {
+      "name": "missing_header",
+      "expected_exit": 2,
+      "expected_message": "before CNF header",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.01005140005145222,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/missing_header.cnf:1: clause before CNF header"
+    },
+    {
+      "name": "duplicate_header",
+      "expected_exit": 2,
+      "expected_message": "duplicate CNF header",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.009763200010638684,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/duplicate_header.cnf:2: duplicate CNF header"
+    },
+    {
+      "name": "wrong_header_type",
+      "expected_exit": 2,
+      "expected_message": "expected exactly",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.010802899952977896,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/wrong_header_type.cnf:1: expected exactly p cnf VARIABLES CLAUSES"
+    },
+    {
+      "name": "extra_header_token",
+      "expected_exit": 2,
+      "expected_message": "expected exactly",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.010823299991898239,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/extra_header_token.cnf:1: expected exactly p cnf VARIABLES CLAUSES"
+    },
+    {
+      "name": "missing_cnf_clause",
+      "expected_exit": 2,
+      "expected_message": "count mismatch",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.011579499987419695,
+      "stdout": "",
+      "stderr": "ERROR: CNF clause count mismatch: recorded-tests/checker/missing_cnf_clause.cnf"
+    },
+    {
+      "name": "excess_cnf_clause",
+      "expected_exit": 2,
+      "expected_message": "more clauses",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.009632500004954636,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/excess_cnf_clause.cnf:2: more clauses than declared"
+    },
+    {
+      "name": "unterminated_input",
+      "expected_exit": 2,
+      "expected_message": "unterminated CNF",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.009305500017944723,
+      "stdout": "",
+      "stderr": "ERROR: unterminated CNF clause: recorded-tests/checker/unterminated_input.cnf"
+    },
+    {
+      "name": "bad_input_literal",
+      "expected_exit": 2,
+      "expected_message": "invalid integer",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.0115728999953717,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/bad_input_literal.cnf:2: invalid integer token '1x'"
+    },
+    {
+      "name": "input_out_of_range",
+      "expected_exit": 2,
+      "expected_message": "outside",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.009603299957234412,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/input_out_of_range.cnf:2: literal outside the declared variable range"
+    },
+    {
+      "name": "proof_out_of_range",
+      "expected_exit": 2,
+      "expected_message": "outside",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.0091845000279136,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/proof_out_of_range.rup:1: literal outside the declared variable range"
+    },
+    {
+      "name": "proof_missing_zero",
+      "expected_exit": 2,
+      "expected_message": "unterminated proof",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.012814499961677939,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/proof_missing_zero.rup:1: unterminated proof clause"
+    },
+    {
+      "name": "proof_trailing_token",
+      "expected_exit": 2,
+      "expected_message": "extra token",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.010878100001718849,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/proof_trailing_token.rup:1: extra token after proof terminator"
+    },
+    {
+      "name": "proof_trailing_clause",
+      "expected_exit": 2,
+      "expected_message": "extra token",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.011692499974742532,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/proof_trailing_clause.rup:1: extra token after proof terminator"
+    },
+    {
+      "name": "proof_bad_literal",
+      "expected_exit": 2,
+      "expected_message": "invalid integer",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.010868500045035034,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/proof_bad_literal.rup:1: invalid integer token '1x'"
+    },
+    {
+      "name": "proof_integer_overflow",
+      "expected_exit": 2,
+      "expected_message": "overflow",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.012586299970280379,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/proof_integer_overflow.rup:1: integer overflow"
+    },
+    {
+      "name": "proof_int_min",
+      "expected_exit": 2,
+      "expected_message": "outside",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.009659199975430965,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/proof_int_min.rup:1: literal outside the declared variable range"
+    },
+    {
+      "name": "proof_negative_zero",
+      "expected_exit": 2,
+      "expected_message": "exactly 0",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.009258700010832399,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/proof_negative_zero.rup:1: the terminator must be exactly 0"
+    },
+    {
+      "name": "proof_plus_literal",
+      "expected_exit": 2,
+      "expected_message": "invalid integer",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.00981570000294596,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/proof_plus_literal.rup:1: invalid integer token '+1'"
+    },
+    {
+      "name": "deletion_bad_literal",
+      "expected_exit": 2,
+      "expected_message": "invalid integer",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.012272900028619915,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/deletion_bad_literal.rup:1: invalid integer token 'x'"
+    },
+    {
+      "name": "deletion_out_of_range",
+      "expected_exit": 2,
+      "expected_message": "outside",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.009413599967956543,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/deletion_out_of_range.rup:1: literal outside the declared variable range"
+    },
+    {
+      "name": "deletion_missing_zero",
+      "expected_exit": 2,
+      "expected_message": "unterminated",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.009112800005823374,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/deletion_missing_zero.rup:1: unterminated proof clause"
+    },
+    {
+      "name": "deletion_extra_token",
+      "expected_exit": 2,
+      "expected_message": "extra token",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.011624099977780133,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/deletion_extra_token.rup:1: extra token after proof terminator"
+    },
+    {
+      "name": "bad_line_after_empty",
+      "expected_exit": 2,
+      "expected_message": "invalid integer",
+      "passed": true,
+      "exit_code": 2,
+      "wall_seconds": 0.011629299959167838,
+      "stdout": "",
+      "stderr": "ERROR: recorded-tests/checker/bad_line_after_empty.rup:2: invalid integer token 'x'"
+    }
+  ],
+  "oracle_tests": [
+    {
+      "case": 0,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011653300025500357
+    },
+    {
+      "case": 1,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010803299956023693
+    },
+    {
+      "case": 2,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011357599985785782
+    },
+    {
+      "case": 3,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010865100019145757
+    },
+    {
+      "case": 4,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.01034300000173971
+    },
+    {
+      "case": 5,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011711099999956787
+    },
+    {
+      "case": 6,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009328800020739436
+    },
+    {
+      "case": 7,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010793199995532632
+    },
+    {
+      "case": 8,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008780300035141408
+    },
+    {
+      "case": 9,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009470799996051937
+    },
+    {
+      "case": 10,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010701999999582767
+    },
+    {
+      "case": 11,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.01022310002008453
+    },
+    {
+      "case": 12,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011780800006818026
+    },
+    {
+      "case": 13,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011360400007106364
+    },
+    {
+      "case": 14,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010709599999245256
+    },
+    {
+      "case": 15,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010193899972364306
+    },
+    {
+      "case": 16,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009256299992557615
+    },
+    {
+      "case": 17,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.00896669999929145
+    },
+    {
+      "case": 18,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009060800017323345
+    },
+    {
+      "case": 19,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.01091060001635924
+    },
+    {
+      "case": 20,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.00990459998138249
+    },
+    {
+      "case": 21,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009025700041092932
+    },
+    {
+      "case": 22,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.01125139999203384
+    },
+    {
+      "case": 23,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010757100011687726
+    },
+    {
+      "case": 24,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010584099974948913
+    },
+    {
+      "case": 25,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010625399998389184
+    },
+    {
+      "case": 26,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.01093140000011772
+    },
+    {
+      "case": 27,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010538799979258329
+    },
+    {
+      "case": 28,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008617900020908564
+    },
+    {
+      "case": 29,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008281599963083863
+    },
+    {
+      "case": 30,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008176399976946414
+    },
+    {
+      "case": 31,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009077499969862401
+    },
+    {
+      "case": 32,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010616499988827854
+    },
+    {
+      "case": 33,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009078499977476895
+    },
+    {
+      "case": 34,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011460400011856109
+    },
+    {
+      "case": 35,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008941799984313548
+    },
+    {
+      "case": 36,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010170899971853942
+    },
+    {
+      "case": 37,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009352600027341396
+    },
+    {
+      "case": 38,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.0089414999820292
+    },
+    {
+      "case": 39,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008379700011573732
+    },
+    {
+      "case": 40,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010369400028139353
+    },
+    {
+      "case": 41,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008895299979485571
+    },
+    {
+      "case": 42,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009225199988577515
+    },
+    {
+      "case": 43,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009173500002361834
+    },
+    {
+      "case": 44,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009108399972319603
+    },
+    {
+      "case": 45,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011342500045429915
+    },
+    {
+      "case": 46,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011569600028451532
+    },
+    {
+      "case": 47,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008851999999023974
+    },
+    {
+      "case": 48,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011306300002615899
+    },
+    {
+      "case": 49,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011492600024212152
+    },
+    {
+      "case": 50,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011650000000372529
+    },
+    {
+      "case": 51,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009445700037758797
+    },
+    {
+      "case": 52,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.01099189999513328
+    },
+    {
+      "case": 53,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009635899972636253
+    },
+    {
+      "case": 54,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008618799969553947
+    },
+    {
+      "case": 55,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009467699972447008
+    },
+    {
+      "case": 56,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010516799986362457
+    },
+    {
+      "case": 57,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.01016980002168566
+    },
+    {
+      "case": 58,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011103900033049285
+    },
+    {
+      "case": 59,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009720200032461435
+    },
+    {
+      "case": 60,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.00918150000507012
+    },
+    {
+      "case": 61,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.0094999999855645
+    },
+    {
+      "case": 62,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009489000018220395
+    },
+    {
+      "case": 63,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009117299981880933
+    },
+    {
+      "case": 64,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009426500007975847
+    },
+    {
+      "case": 65,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009129200014285743
+    },
+    {
+      "case": 66,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009214000019710511
+    },
+    {
+      "case": 67,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009989400045014918
+    },
+    {
+      "case": 68,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.012020100024528801
+    },
+    {
+      "case": 69,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011197599989827722
+    },
+    {
+      "case": 70,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009170600038487464
+    },
+    {
+      "case": 71,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011423400021158159
+    },
+    {
+      "case": 72,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009014299954287708
+    },
+    {
+      "case": 73,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009394699998665601
+    },
+    {
+      "case": 74,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011133900028653443
+    },
+    {
+      "case": 75,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008847200020682067
+    },
+    {
+      "case": 76,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009254399978090078
+    },
+    {
+      "case": 77,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009473800018895417
+    },
+    {
+      "case": 78,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.01081280002836138
+    },
+    {
+      "case": 79,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010915099992416799
+    },
+    {
+      "case": 80,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.00966879999032244
+    },
+    {
+      "case": 81,
+      "variables": 6,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008616700011771172
+    },
+    {
+      "case": 82,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009737700049299747
+    },
+    {
+      "case": 83,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008786500024143606
+    },
+    {
+      "case": 84,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.00929870002437383
+    },
+    {
+      "case": 85,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.01127939997240901
+    },
+    {
+      "case": 86,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009833099960815161
+    },
+    {
+      "case": 87,
+      "variables": 4,
+      "expected_first_invalid": 6,
+      "actual_first_invalid": 6,
+      "passed": true,
+      "wall_seconds": 0.008704699983354658
+    },
+    {
+      "case": 88,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011350999993737787
+    },
+    {
+      "case": 89,
+      "variables": 5,
+      "expected_first_invalid": 2,
+      "actual_first_invalid": 2,
+      "passed": true,
+      "wall_seconds": 0.009602600010111928
+    },
+    {
+      "case": 90,
+      "variables": 2,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.008999699959531426
+    },
+    {
+      "case": 91,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011574000003747642
+    },
+    {
+      "case": 92,
+      "variables": 7,
+      "expected_first_invalid": 2,
+      "actual_first_invalid": 2,
+      "passed": true,
+      "wall_seconds": 0.009327900013886392
+    },
+    {
+      "case": 93,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009069399966392666
+    },
+    {
+      "case": 94,
+      "variables": 7,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.011542699998244643
+    },
+    {
+      "case": 95,
+      "variables": 6,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009280500002205372
+    },
+    {
+      "case": 96,
+      "variables": 5,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.010871800011955202
+    },
+    {
+      "case": 97,
+      "variables": 6,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010107400012202561
+    },
+    {
+      "case": 98,
+      "variables": 3,
+      "expected_first_invalid": 3,
+      "actual_first_invalid": 3,
+      "passed": true,
+      "wall_seconds": 0.0108780000009574
+    },
+    {
+      "case": 99,
+      "variables": 7,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.0108720000134781
+    },
+    {
+      "case": 100,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010496600007172674
+    },
+    {
+      "case": 101,
+      "variables": 7,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.010269999969750643
+    },
+    {
+      "case": 102,
+      "variables": 2,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.009302699996624142
+    },
+    {
+      "case": 103,
+      "variables": 3,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.010427300003357232
+    },
+    {
+      "case": 104,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.012669700023252517
+    },
+    {
+      "case": 105,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009148700046353042
+    },
+    {
+      "case": 106,
+      "variables": 4,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.00980669999262318
+    },
+    {
+      "case": 107,
+      "variables": 4,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.01135660003637895
+    },
+    {
+      "case": 108,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009678400005213916
+    },
+    {
+      "case": 109,
+      "variables": 7,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009457500011194497
+    },
+    {
+      "case": 110,
+      "variables": 2,
+      "expected_first_invalid": 3,
+      "actual_first_invalid": 3,
+      "passed": true,
+      "wall_seconds": 0.01006910001160577
+    },
+    {
+      "case": 111,
+      "variables": 3,
+      "expected_first_invalid": 6,
+      "actual_first_invalid": 6,
+      "passed": true,
+      "wall_seconds": 0.009114000014960766
+    },
+    {
+      "case": 112,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011223000008612871
+    },
+    {
+      "case": 113,
+      "variables": 7,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.01157859998056665
+    },
+    {
+      "case": 114,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009202599991112947
+    },
+    {
+      "case": 115,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011156200023833662
+    },
+    {
+      "case": 116,
+      "variables": 7,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.009685500001069158
+    },
+    {
+      "case": 117,
+      "variables": 2,
+      "expected_first_invalid": 10,
+      "actual_first_invalid": 10,
+      "passed": true,
+      "wall_seconds": 0.009103899996262044
+    },
+    {
+      "case": 118,
+      "variables": 2,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.008894700033124536
+    },
+    {
+      "case": 119,
+      "variables": 2,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.010577499982900918
+    },
+    {
+      "case": 120,
+      "variables": 6,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.00824380002450198
+    },
+    {
+      "case": 121,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009608499996829778
+    },
+    {
+      "case": 122,
+      "variables": 3,
+      "expected_first_invalid": 3,
+      "actual_first_invalid": 3,
+      "passed": true,
+      "wall_seconds": 0.00833839998813346
+    },
+    {
+      "case": 123,
+      "variables": 7,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.010189499997068197
+    },
+    {
+      "case": 124,
+      "variables": 7,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009191199962515384
+    },
+    {
+      "case": 125,
+      "variables": 3,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.008245799981523305
+    },
+    {
+      "case": 126,
+      "variables": 7,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.009089400002267212
+    },
+    {
+      "case": 127,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010050399985630065
+    },
+    {
+      "case": 128,
+      "variables": 4,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.008606499992311
+    },
+    {
+      "case": 129,
+      "variables": 5,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.008518900023773313
+    },
+    {
+      "case": 130,
+      "variables": 4,
+      "expected_first_invalid": 2,
+      "actual_first_invalid": 2,
+      "passed": true,
+      "wall_seconds": 0.00817539996933192
+    },
+    {
+      "case": 131,
+      "variables": 2,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.010237200011033565
+    },
+    {
+      "case": 132,
+      "variables": 2,
+      "expected_first_invalid": 2,
+      "actual_first_invalid": 2,
+      "passed": true,
+      "wall_seconds": 0.008164300001226366
+    },
+    {
+      "case": 133,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010621099965646863
+    },
+    {
+      "case": 134,
+      "variables": 6,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.00929849996464327
+    },
+    {
+      "case": 135,
+      "variables": 6,
+      "expected_first_invalid": 2,
+      "actual_first_invalid": 2,
+      "passed": true,
+      "wall_seconds": 0.008509899955242872
+    },
+    {
+      "case": 136,
+      "variables": 5,
+      "expected_first_invalid": 3,
+      "actual_first_invalid": 3,
+      "passed": true,
+      "wall_seconds": 0.010900499997660518
+    },
+    {
+      "case": 137,
+      "variables": 6,
+      "expected_first_invalid": 2,
+      "actual_first_invalid": 2,
+      "passed": true,
+      "wall_seconds": 0.008975800010375679
+    },
+    {
+      "case": 138,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008949599985498935
+    },
+    {
+      "case": 139,
+      "variables": 7,
+      "expected_first_invalid": 3,
+      "actual_first_invalid": 3,
+      "passed": true,
+      "wall_seconds": 0.01166169997304678
+    },
+    {
+      "case": 140,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010334499995224178
+    },
+    {
+      "case": 141,
+      "variables": 6,
+      "expected_first_invalid": 5,
+      "actual_first_invalid": 5,
+      "passed": true,
+      "wall_seconds": 0.010386300040408969
+    },
+    {
+      "case": 142,
+      "variables": 5,
+      "expected_first_invalid": 7,
+      "actual_first_invalid": 7,
+      "passed": true,
+      "wall_seconds": 0.011131600011140108
+    },
+    {
+      "case": 143,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011028800043277442
+    },
+    {
+      "case": 144,
+      "variables": 7,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.010859800036996603
+    },
+    {
+      "case": 145,
+      "variables": 5,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.010064300033263862
+    },
+    {
+      "case": 146,
+      "variables": 6,
+      "expected_first_invalid": 2,
+      "actual_first_invalid": 2,
+      "passed": true,
+      "wall_seconds": 0.010265200049616396
+    },
+    {
+      "case": 147,
+      "variables": 4,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.011792000033892691
+    },
+    {
+      "case": 148,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010356599988881499
+    },
+    {
+      "case": 149,
+      "variables": 5,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.00902290001977235
+    },
+    {
+      "case": 150,
+      "variables": 5,
+      "expected_first_invalid": 4,
+      "actual_first_invalid": 4,
+      "passed": true,
+      "wall_seconds": 0.01081859995611012
+    },
+    {
+      "case": 151,
+      "variables": 4,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.008927399991080165
+    },
+    {
+      "case": 152,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009186499984934926
+    },
+    {
+      "case": 153,
+      "variables": 6,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.009774600039236248
+    },
+    {
+      "case": 154,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.00896519998786971
+    },
+    {
+      "case": 155,
+      "variables": 7,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.011016800010111183
+    },
+    {
+      "case": 156,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.01139489997876808
+    },
+    {
+      "case": 157,
+      "variables": 6,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009179499989841133
+    },
+    {
+      "case": 158,
+      "variables": 5,
+      "expected_first_invalid": 3,
+      "actual_first_invalid": 3,
+      "passed": true,
+      "wall_seconds": 0.009725000010803342
+    },
+    {
+      "case": 159,
+      "variables": 6,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.010757600015494972
+    },
+    {
+      "case": 160,
+      "variables": 7,
+      "expected_first_invalid": 5,
+      "actual_first_invalid": 5,
+      "passed": true,
+      "wall_seconds": 0.010456799995154142
+    },
+    {
+      "case": 161,
+      "variables": 7,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009782199980691075
+    },
+    {
+      "case": 162,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009635999973397702
+    },
+    {
+      "case": 163,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.01048970001284033
+    },
+    {
+      "case": 164,
+      "variables": 3,
+      "expected_first_invalid": 4,
+      "actual_first_invalid": 4,
+      "passed": true,
+      "wall_seconds": 0.009065299993380904
+    },
+    {
+      "case": 165,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.011344099999405444
+    },
+    {
+      "case": 166,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008870499965269119
+    },
+    {
+      "case": 167,
+      "variables": 6,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008608600008301437
+    },
+    {
+      "case": 168,
+      "variables": 7,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.009739100001752377
+    },
+    {
+      "case": 169,
+      "variables": 3,
+      "expected_first_invalid": 6,
+      "actual_first_invalid": 6,
+      "passed": true,
+      "wall_seconds": 0.008950899995397776
+    },
+    {
+      "case": 170,
+      "variables": 6,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.00829999998677522
+    },
+    {
+      "case": 171,
+      "variables": 5,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.008193200046662241
+    },
+    {
+      "case": 172,
+      "variables": 7,
+      "expected_first_invalid": 3,
+      "actual_first_invalid": 3,
+      "passed": true,
+      "wall_seconds": 0.009948199964128435
+    },
+    {
+      "case": 173,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008158800017554313
+    },
+    {
+      "case": 174,
+      "variables": 7,
+      "expected_first_invalid": 3,
+      "actual_first_invalid": 3,
+      "passed": true,
+      "wall_seconds": 0.01030320004792884
+    },
+    {
+      "case": 175,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009099799965042621
+    },
+    {
+      "case": 176,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010251900006551296
+    },
+    {
+      "case": 177,
+      "variables": 2,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.00866739999037236
+    },
+    {
+      "case": 178,
+      "variables": 6,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.008022300025913864
+    },
+    {
+      "case": 179,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008913800003938377
+    },
+    {
+      "case": 180,
+      "variables": 6,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.010243600001558661
+    },
+    {
+      "case": 181,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008286900003440678
+    },
+    {
+      "case": 182,
+      "variables": 4,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.010300699970684946
+    },
+    {
+      "case": 183,
+      "variables": 7,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008092299976851791
+    },
+    {
+      "case": 184,
+      "variables": 7,
+      "expected_first_invalid": 2,
+      "actual_first_invalid": 2,
+      "passed": true,
+      "wall_seconds": 0.00861700001405552
+    },
+    {
+      "case": 185,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008447200001683086
+    },
+    {
+      "case": 186,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009912599984090775
+    },
+    {
+      "case": 187,
+      "variables": 7,
+      "expected_first_invalid": 3,
+      "actual_first_invalid": 3,
+      "passed": true,
+      "wall_seconds": 0.00843190000159666
+    },
+    {
+      "case": 188,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010358100000303239
+    },
+    {
+      "case": 189,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008511300024110824
+    },
+    {
+      "case": 190,
+      "variables": 6,
+      "expected_first_invalid": 3,
+      "actual_first_invalid": 3,
+      "passed": true,
+      "wall_seconds": 0.00873410003259778
+    },
+    {
+      "case": 191,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008606499992311
+    },
+    {
+      "case": 192,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010374600009527057
+    },
+    {
+      "case": 193,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.00816799997119233
+    },
+    {
+      "case": 194,
+      "variables": 6,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009323300037067384
+    },
+    {
+      "case": 195,
+      "variables": 6,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008406500041019171
+    },
+    {
+      "case": 196,
+      "variables": 6,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009647600003518164
+    },
+    {
+      "case": 197,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008617200015578419
+    },
+    {
+      "case": 198,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009839799953624606
+    },
+    {
+      "case": 199,
+      "variables": 3,
+      "expected_first_invalid": 2,
+      "actual_first_invalid": 2,
+      "passed": true,
+      "wall_seconds": 0.00849410000955686
+    },
+    {
+      "case": 200,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008215299982111901
+    },
+    {
+      "case": 201,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.00815180002246052
+    },
+    {
+      "case": 202,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010585099982563406
+    },
+    {
+      "case": 203,
+      "variables": 7,
+      "expected_first_invalid": 2,
+      "actual_first_invalid": 2,
+      "passed": true,
+      "wall_seconds": 0.008075800025835633
+    },
+    {
+      "case": 204,
+      "variables": 6,
+      "expected_first_invalid": 2,
+      "actual_first_invalid": 2,
+      "passed": true,
+      "wall_seconds": 0.01047489995835349
+    },
+    {
+      "case": 205,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.00812349998159334
+    },
+    {
+      "case": 206,
+      "variables": 6,
+      "expected_first_invalid": 9,
+      "actual_first_invalid": 9,
+      "passed": true,
+      "wall_seconds": 0.008581099973525852
+    },
+    {
+      "case": 207,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008318500011228025
+    },
+    {
+      "case": 208,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009583399980328977
+    },
+    {
+      "case": 209,
+      "variables": 7,
+      "expected_first_invalid": 2,
+      "actual_first_invalid": 2,
+      "passed": true,
+      "wall_seconds": 0.008457400021143258
+    },
+    {
+      "case": 210,
+      "variables": 5,
+      "expected_first_invalid": 2,
+      "actual_first_invalid": 2,
+      "passed": true,
+      "wall_seconds": 0.009837299992796034
+    },
+    {
+      "case": 211,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010084400011692196
+    },
+    {
+      "case": 212,
+      "variables": 4,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008536299981642514
+    },
+    {
+      "case": 213,
+      "variables": 7,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.009656399954110384
+    },
+    {
+      "case": 214,
+      "variables": 6,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008699800004251301
+    },
+    {
+      "case": 215,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008321699977386743
+    },
+    {
+      "case": 216,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008512400032486767
+    },
+    {
+      "case": 217,
+      "variables": 6,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010362499975599349
+    },
+    {
+      "case": 218,
+      "variables": 3,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.00795629998901859
+    },
+    {
+      "case": 219,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010186400031670928
+    },
+    {
+      "case": 220,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008688699977938086
+    },
+    {
+      "case": 221,
+      "variables": 4,
+      "expected_first_invalid": 2,
+      "actual_first_invalid": 2,
+      "passed": true,
+      "wall_seconds": 0.008577500004321337
+    },
+    {
+      "case": 222,
+      "variables": 4,
+      "expected_first_invalid": 2,
+      "actual_first_invalid": 2,
+      "passed": true,
+      "wall_seconds": 0.00846589996945113
+    },
+    {
+      "case": 223,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.009740700013935566
+    },
+    {
+      "case": 224,
+      "variables": 2,
+      "expected_first_invalid": 13,
+      "actual_first_invalid": 13,
+      "passed": true,
+      "wall_seconds": 0.008794499968644232
+    },
+    {
+      "case": 225,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010488800005987287
+    },
+    {
+      "case": 226,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008156800002325326
+    },
+    {
+      "case": 227,
+      "variables": 7,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008569199999328703
+    },
+    {
+      "case": 228,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008081600011792034
+    },
+    {
+      "case": 229,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010652200027834624
+    },
+    {
+      "case": 230,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008681799983605742
+    },
+    {
+      "case": 231,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008273100014775991
+    },
+    {
+      "case": 232,
+      "variables": 6,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.010090900002978742
+    },
+    {
+      "case": 233,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.00828810001257807
+    },
+    {
+      "case": 234,
+      "variables": 7,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008837600005790591
+    },
+    {
+      "case": 235,
+      "variables": 3,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008769500011112541
+    },
+    {
+      "case": 236,
+      "variables": 5,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.010976599995046854
+    },
+    {
+      "case": 237,
+      "variables": 5,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.008924300025682896
+    },
+    {
+      "case": 238,
+      "variables": 2,
+      "expected_first_invalid": 0,
+      "actual_first_invalid": 0,
+      "passed": true,
+      "wall_seconds": 0.00938160001533106
+    },
+    {
+      "case": 239,
+      "variables": 4,
+      "expected_first_invalid": 1,
+      "actual_first_invalid": 1,
+      "passed": true,
+      "wall_seconds": 0.009172099991701543
+    }
+  ],
+  "passed": true,
+  "fixed_count": 37,
+  "oracle_count": 240,
+  "oracle_successful_proofs": 165
+}

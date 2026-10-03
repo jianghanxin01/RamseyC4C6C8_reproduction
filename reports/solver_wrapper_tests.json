@@ -1,0 +1,470 @@
+[
+  {
+    "name": "empty_formula",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "empty_clause",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "contradictory_units",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "multiline_sat",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "duplicate_tautology_sat",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "search_unsat",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "missing_header",
+    "expected": 2,
+    "actual": 2,
+    "proof_checked": null
+  },
+  {
+    "name": "duplicate_header",
+    "expected": 2,
+    "actual": 2,
+    "proof_checked": null
+  },
+  {
+    "name": "wrong_count",
+    "expected": 2,
+    "actual": 2,
+    "proof_checked": null
+  },
+  {
+    "name": "extra_clause",
+    "expected": 2,
+    "actual": 2,
+    "proof_checked": null
+  },
+  {
+    "name": "out_of_range",
+    "expected": 2,
+    "actual": 2,
+    "proof_checked": null
+  },
+  {
+    "name": "trailing_junk",
+    "expected": 2,
+    "actual": 2,
+    "proof_checked": null
+  },
+  {
+    "name": "unterminated",
+    "expected": 2,
+    "actual": 2,
+    "proof_checked": null
+  },
+  {
+    "name": "integer_overflow",
+    "expected": 2,
+    "actual": 2,
+    "proof_checked": null
+  },
+  {
+    "name": "negative_zero",
+    "expected": 2,
+    "actual": 2,
+    "proof_checked": null
+  },
+  {
+    "name": "negative_header",
+    "expected": 2,
+    "actual": 2,
+    "proof_checked": null
+  },
+  {
+    "name": "header_extra",
+    "expected": 2,
+    "actual": 2,
+    "proof_checked": null
+  },
+  {
+    "name": "random_0",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_1",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_2",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_3",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_4",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_5",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_6",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_7",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_8",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_9",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_10",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_11",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_12",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_13",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_14",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_15",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_16",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_17",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_18",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_19",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_20",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_21",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_22",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_23",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_24",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_25",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_26",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_27",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_28",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_29",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_30",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_31",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_32",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_33",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_34",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_35",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_36",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_37",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_38",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_39",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_40",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_41",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_42",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_43",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_44",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_45",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_46",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_47",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_48",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_49",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_50",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_51",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_52",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_53",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_54",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_55",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_56",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_57",
+    "expected": 20,
+    "actual": 20,
+    "proof_checked": true
+  },
+  {
+    "name": "random_58",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "random_59",
+    "expected": 10,
+    "actual": 10,
+    "proof_checked": null
+  },
+  {
+    "name": "existing_output_same_input",
+    "expected": 2,
+    "actual": 2,
+    "input_preserved": true
+  }
+]

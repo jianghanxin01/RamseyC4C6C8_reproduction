@@ -1,0 +1,23 @@
+[
+  {
+    "name": "generate_only",
+    "exit": 0,
+    "expected_exit": 0,
+    "pass": true,
+    "output": "48T1: GENERATED (31 variables, 5135 clauses)\r\nALL REQUESTED CNFS GENERATED (NOT COMPARED)"
+  },
+  {
+    "name": "unknown_case",
+    "exit": 2,
+    "expected_exit": 2,
+    "pass": true,
+    "output": "ERROR: Unknown case ID: nonexistent"
+  },
+  {
+    "name": "overwrite_refused",
+    "exit": 1,
+    "expected_exit": 1,
+    "pass": true,
+    "output": "48T1: FAIL: Refusing to overwrite existing file: recorded-tests/inputs/generation_only_test54/48T1.cnf\r\nINPUT CHECK FAILED"
+  }
+]
