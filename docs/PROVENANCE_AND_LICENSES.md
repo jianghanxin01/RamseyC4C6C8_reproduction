@@ -5,9 +5,9 @@
 `RamseyInputs.cpp` completely reconstructs the nine specific graph-to-CNF
 encodings, including all auxiliary clauses. It uses the C++14 standard library
 and small platform path helpers, and incorporates no external SAT solver.
-`RamseyRup.cpp` is a C++14 implementation of the watched-literal RUP-checking
-algorithm used in the project's earlier C# checker, with stricter parsing and
-an explicit final-empty requirement. It likewise incorporates no solver code.
+`RamseyRup.cpp` is a C++14 implementation of watched-literal RUP checking,
+with strict parsing and an explicit final-empty requirement. It likewise
+incorporates no solver code.
 The Windows launchers orchestrate these programs and do no mathematical search.
 
 These project sources and explanatory material were prepared with OpenAI Codex
@@ -53,26 +53,18 @@ The wrapper uses the core `Solver` and no separate preprocessing executable.
 
 ## Distributed inputs and evidence
 
-The 18 data files are byte-for-byte copies of the nine original CNF/RUP pairs
-from the preceding proof archive. Stable IDs identify instances, not manuscript
-version numbers. `instances.json` records their exact identities and hashes.
-The C++ input program reconstructs every clause family, including the low
+The 18 data files are byte-for-byte copies of the nine CNF/RUP pairs supplied
+with the previous reproduction package. Stable IDs identify instances, not
+manuscript version numbers. `instances.json` records their exact identities
+and hashes.
+The new C++ input program reconstructs every clause family, including the low
 blue path and lexicographic auxiliary blocks that previously had only source
-inspection. Historical checker runs validated all nine archived certificates.
+inspection. The new checker freshly checked all nine archived certificates.
 
-Recorded reports have been sanitized to use relative distribution paths or
-relative historical labels. They retain numerical results, counts, timings and
-hashes; full raw reports remain in the development records. A historical label
-such as `recorded-runs/full-regeneration/generated/B-root-1.rup` identifies a
-recorded experiment, not an additional file promised inside this distribution.
-The newly generated large traces are omitted because the archived traces and
-reproduction programs already supply the corresponding verification/reproduction
-routes. See `reports/README.txt` for the exact evidence scope.
-
-The recorded historical solver hash identifies the earlier tested build.
-The solver supplied in RamseyC4C6C8 was compiled again. Its executable identity
-and the checks performed for this release are recorded separately in
-`reports/release_validation.json`.
+This compact public package omits historical execution logs and research notes.
+The one-click launcher generates new inputs and proofs into a fresh `results/`
+directory, after checking the supplied inputs and archived proofs. The newly
+generated large traces are therefore not distributed twice.
 
 `SHA256SUMS.txt` identifies immutable distributed files. Hash agreement is a
 file-integrity check, not proof of the encoded graph statement. Reconstructed

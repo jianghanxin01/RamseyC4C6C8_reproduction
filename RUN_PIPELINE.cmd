@@ -89,12 +89,12 @@ mkdir "%RAMSEY_RUN%" >nul 2>&1
 set "RAMSEY_STEP_EXIT=%errorlevel%"
 if not "%RAMSEY_STEP_EXIT%"=="0" goto directory_error
 set "RAMSEY_SUMMARY=%RAMSEY_RUN%\summary.txt"
->"%RAMSEY_SUMMARY%" echo RamseyC4C6C8 reproduction: %RAMSEY_MODE%
+>"%RAMSEY_SUMMARY%" echo Ramsey reproduction v2: %RAMSEY_MODE%
 >>"%RAMSEY_SUMMARY%" echo Started: %RAMSEY_STAMP%
 >>"%RAMSEY_SUMMARY%" echo Executable directory: "%RAMSEY_BIN%"
 >>"%RAMSEY_SUMMARY%" echo All nine graph inputs are audited before any proof result is accepted.
 echo.
-echo RamseyC4C6C8 reproduction: %RAMSEY_MODE%
+echo Ramsey reproduction v2: %RAMSEY_MODE%
 echo Log directory: "%RAMSEY_RUN%"
 echo.
 if defined RAMSEY_CASE >>"%RAMSEY_SUMMARY%" echo Selected proof case: %RAMSEY_CASE%

@@ -4,7 +4,9 @@
   "upstream_commit_prefix": "084d737",
   "upstream_archive_url": "https://codeload.github.com/audemard/glucose/zip/refs/tags/4.2.1",
   "upstream_archive_sha256": "71f5a6b11757bf50b2774fcceafa5e298e864cdbc9b489d115ea9206ba6bb519",
+  "compiler": "Microsoft Visual Studio 2026 v18.10.1, x64 tools 14.51.36257.0",
   "settings": "/std:c++14 /O2 /MT /EHsc /DNDEBUG",
+  "executable_sha256": "62ee399c1a46b0aee54247574e26bbaad02e8f2b0b7620c0ee4f3acf5ddb146c",
   "files": [
     {
       "file": "CHANGELOG",
@@ -192,11 +194,5 @@
       "adapted_sha256": "eb51eea780993b30279b30cadc636cc5c7bd6b7b117bcace34d627aa33592a2f",
       "changed": true
     }
-  ],
-  "historical_executable_sha256": "62ee399c1a46b0aee54247574e26bbaad02e8f2b0b7620c0ee4f3acf5ddb146c",
-  "historical_build_date": "2026-09-23",
-  "release_executable_sha256": "4e7f2ee0d6846631674bd9969761eeebe1c619c119033a0b064fa4860dfe90f8",
-  "release_validation": "../../reports/release_validation.json",
-  "historical_compiler": "Microsoft Visual Studio 2026 v18.10.1, x64 tools 14.51.36257.0",
-  "release_build_environment": "Visual Studio 2022 Developer Command Prompt v17.12.3"
+  ]
 }

@@ -22,7 +22,7 @@ if exist "%RAMSEY_BUILD_LOGS%\" goto new_build_directory
 mkdir "%RAMSEY_BUILD_LOGS%" >nul 2>&1
 set "RAMSEY_COMPONENT_EXIT=%errorlevel%"
 if not "%RAMSEY_COMPONENT_EXIT%"=="0" goto directory_error
->"%RAMSEY_BUILD_LOGS%\summary.txt" echo RamseyC4C6C8 source build
+>"%RAMSEY_BUILD_LOGS%\summary.txt" echo Ramsey reproduction v2 source build
 >>"%RAMSEY_BUILD_LOGS%\summary.txt" echo Started: %RAMSEY_STAMP%
 echo Build logs: "%RAMSEY_BUILD_LOGS%"
 set "RAMSEY_BUILD_STEP=copying source to the fresh build directory"

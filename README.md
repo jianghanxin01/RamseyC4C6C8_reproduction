@@ -1,111 +1,84 @@
-# Native Windows reproduction package: R(C4,C6,C8)=12
+# Reproduction package v2 for R(C4,C6,C8)=12
 
-This package supplies three finite computational modules, represented by nine
-CNF/RUP pairs, and complete C++14 source for input reconstruction, proof
-generation and independent RUP checking. The graph-theoretic reductions and
-the remainder of the Ramsey argument are proved in the submitted paper.
-These programs do not formalize the entire mathematical proof.
+This is the compact public computational archive accompanying the paper and
+its mathematical proof supplement. It contains **nine CNF formulas and nine
+RUP certificates** in three modules, with complete C++14 source for input
+reconstruction, proof generation, and independent RUP checking. Version 2
+repackages the same 18 formula/certificate files and the same three Release
+executables as the previous package; it removes historical logs and duplicate
+guides. No new computational assertion is introduced by the repackaging.
 
-## Run
+## 一键运行 / One-click run
 
-Extract the package to a writable directory on Windows x64. No Python, PySAT,
-separate SAT installation, Visual Studio or separately installed Visual C++
-Redistributable is needed to run the supplied executables. The supplied Release
-programs use the static C/C++ runtime; their inspected DLL dependency is
-`KERNEL32.dll`. Windows PowerShell and the command processor are built-in tools
-used by the launchers.
+在 Windows x64 上完整解压 ZIP 到可写目录，然后双击
+`ONE_CLICK_REPRODUCE_V2.cmd`。默认依次校验文件哈希、核验九份原始证明、
+重新生成九份输入和证明并核验新证明。运行结果写入新建的 `results/` 目录。
+运行所附 EXE 不需要 Visual Studio、Python 或另装 SAT 求解器。
 
-Double-click **VERIFY_ALL.cmd** to reconstruct and compare all nine inputs,
-then check all nine archived proofs. Double-click **REPRODUCE_ALL.cmd** to
-generate new inputs, compare them with the archive, produce new proofs and
-check those proofs against the new inputs. Each window waits for a key when
-finished. Logs and new files go into a fresh timestamped `results/` directory.
+On Windows x64, extract the *entire* ZIP to a writable folder and double-click
+`ONE_CLICK_REPRODUCE_V2.cmd`. The default command checks file hashes, checks
+all nine archived proofs, reconstructs all nine inputs, generates nine new
+proofs, and checks each new proof against its newly generated input. It writes
+logs and new files to fresh `results/` subdirectories. Paths containing spaces
+are supported. The supplied executables need no Python, Visual Studio, or
+separate SAT installation. Windows PowerShell is used for the file-hash check.
 
-For unattended use, run from a command prompt:
-
-```text
-VERIFY_ALL.cmd --no-pause
-REPRODUCE_ALL.cmd --no-pause
-CHECK_HASHES.cmd --no-pause
-```
-
-A quick test, including the complete input audit, is:
+For a quick test from a command prompt, while still auditing all nine inputs:
 
 ```text
-VERIFY_ALL.cmd --no-pause --case B-leafK4
-REPRODUCE_ALL.cmd --no-pause --case B-leafK4
+ONE_CLICK_REPRODUCE_V2.cmd --no-pause --case B-leafK4
 ```
 
-For a complete run, the final summary must report all nine input audits and
-**9 selected certificate checks passed**, with exit code 0. A selected-case
-trial does not establish a complete 9/9 result. See `REPRODUCE_EN.txt` or
-`REPRODUCE_ZH.txt` for the full operating instructions.
-
-Earlier validation reports in `reports/` retain historical measurements and
-executable identities. They do not automatically validate a later build.
-`reports/release_validation.json` records the checks performed for this
-release and the identity of its newly compiled solver. Fresh proofs need not
-have the same hashes, lengths or running times as the archived proofs.
-
-## Rebuild from source
-
-Install the Visual Studio Desktop development with C++ workload and Windows SDK.
-Then double-click **BUILD_ALL.cmd**, or run:
+For the complete run without a final pause:
 
 ```text
-BUILD_ALL.cmd --no-pause
-VERIFY_ALL.cmd --no-pause --case B-leafK4 --bin rebuilt_bin
-REPRODUCE_ALL.cmd --no-pause --case B-leafK4 --bin rebuilt_bin
+ONE_CLICK_REPRODUCE_V2.cmd --no-pause
 ```
 
-`BUILD_ALL.cmd` copies the supplied sources to a new
-`results/build_TIMESTAMP_RANDOM/src/` directory and invokes each component's
-build command. Complete compiler output is retained as `inputs_build.log`,
-`checker_build.log` and `solver_build.log`, with `summary.txt` recording the
-overall result. All three programs must build successfully before they are
-copied to `rebuilt_bin/`. This command never replaces `bin/` or edits the
-distributed sources. Rebuilding may change executable hashes; test rebuilt
-programs with `--bin rebuilt_bin` rather than overwriting the distributed ones.
-The build uses C++14, optimized Release settings and `/MT` static runtime.
+The launcher returns 0 only when every requested step succeeds. A solver's
+`UNSAT` message is insufficient: `RamseyRup.exe` must check the corresponding
+proof and accept its final empty-clause addition. The complete run may take
+several minutes; there is no fixed runtime guarantee.
 
-The command returns 0 only on complete success. Build failure, input mismatch,
-solver error or rejected proof produces a nonzero result. Solver exit 20 means
-UNSAT, but the reproduction command still requires the independent checker to
-return 0 against the generated input. Solver output alone is never accepted.
+## The nine cases
 
-## Contents and scope
+| Module | Stable instance IDs | Mathematical role |
+|---|---|---|
+| Arrow graphs | `48T1`, `48T2` | Two local `(C4,C8)` arrow relations |
+| Ten-vertex hexagon cases | `H10-I3`, `H10-K2_K1`, `H10-P3` | A small `C6`-free extremal statement after the paper's hand reduction |
+| Twelve-vertex octagon cases | `B-root-1`, `B-root-2`, `B-leafK4`, `B-C9` | Four normalized cases in the `C8`-free argument |
 
-| Location | Contents |
-|---|---|
-| `bin/` | Three native Windows x64 Release executables |
-| `data/` | Exactly nine original CNFs and their nine original RUP proofs |
-| `src/inputs/` | Complete graph/auxiliary-clause reconstruction and VS project |
-| `src/checker/` | Independent watched-literal RUP checker |
-| `src/solver/` | Windows wrapper, adapted Glucose core, notices and source patch |
-| `vendor/` | Original official Glucose 4.2.1 source archive |
-| `docs/` | Input semantics, command reference, provenance and licensing notes |
-| `reports/` | Historical validation evidence and the current release record |
-| `instances.json` | Exact nine distributed CNF/RUP identities and SHA256 hashes |
-| `SHA256SUMS.txt` | Hashes of the immutable distributed files |
+`instances.json` lists the exact file paths and SHA-256 hashes for all 18
+data files. `docs/INPUT_SEMANTICS.md` explains the graph interpretation,
+normalizations, auxiliary variables, and clause families. The paper and proof
+supplement establish why these nine cases cover the mathematical claims.
+The archive does not encode a full three-colouring search of `K12`, certify
+external extremal data, or formalize the entire proof.
 
-The finite modules comprise the two local arrow instances `48T1,48T2`, the
-three normalized ten-vertex hexagon cases, and the four normalized blue
-boundary cases. The meanings and auxiliary encodings are documented in
-`docs/INPUT_SEMANTICS.md`. The case-coverage arguments remain mathematical
-proofs in the paper. Published cycle theorems and McKay's external extremal
-values are separate dependencies and are not certified by these nine inputs.
+## Files and source build
 
-`RamseyInputs` reconstructs every clause family and compares complete clause
-multisets, including all auxiliaries. `RamseyRup` checks each proof addition by
-unit propagation and requires an explicit final empty-clause addition. Neither
-program performs SAT search. `RamseySolve` generates proofs using the official
-Glucose core, whose algorithm and authorship are identified in
-`docs/PROVENANCE_AND_LICENSES.md`. The checker is not formally verified.
+- `data/`: the nine CNF/RUP pairs; `bin/`: three Windows x64 Release programs.
+- `src/inputs/`: C++14 graph-input constructor; `src/checker/`: C++14 RUP
+  checker; `src/solver/`: C++14 solver wrapper and adapted Glucose core.
+- `vendor/`: original Glucose 4.2.1 archive for source comparison;
+  `docs/PROVENANCE_AND_LICENSES.md`: changes, authorship, and notices.
+- `CHECK_HASHES.cmd`, `VERIFY_ALL.cmd`, `REPRODUCE_ALL.cmd`, and `BUILD_ALL.cmd`:
+  separate integrity, checking, regeneration, and source-build commands.
 
-The programs and explanations were prepared with OpenAI Codex assistance.
-Different implementations are not claimed to have independent human authorship.
-The paper contains the AI-use statement and author responsibility declaration.
+The distributed programs use optimized C++14 Release builds with a static
+C/C++ runtime. To rebuild them, install the Visual Studio Desktop development
+with C++ workload and Windows SDK, then run `BUILD_ALL.cmd`. It creates
+`rebuilt_bin/` without overwriting the distributed executables. Select those
+programs with `VERIFY_ALL.cmd --no-pause --bin rebuilt_bin` or
+`REPRODUCE_ALL.cmd --no-pause --bin rebuilt_bin`.
 
-See `docs/WINDOWS_COMMANDS.md` for every option and the exact log layout.
-Generated results, build intermediates and rebuilt binaries are deliberately
-outside the immutable checksum manifest and are not included in this package.
+`SHA256SUMS.txt` identifies every immutable distributed file except itself.
+Run `CHECK_HASHES.cmd --no-pause` to compare the files in an extracted package.
+The archive's SHA-256 should also be recorded on its public deposit page.
+Hashes identify bytes; mathematical correctness also depends on the encoding
+semantics, accepted RUP derivations, and the hand arguments in the paper.
+Generated `results/` and `rebuilt_bin/` are deliberately outside the manifest.
+
+The materials were prepared with OpenAI Codex assistance. The programs and
+checker are not formally verified; the paper contains the full AI-use
+statement and author responsibility declaration.
